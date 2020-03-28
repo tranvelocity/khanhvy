@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# for i in {30..0}; do
+#   if [ -d "/var/lib/mysql/khanhvy_db" ]; then
+#     break
+#   fi
+#   echo 'MySQL init process in progress...'
+#   sleep 1
+# done
+#
+# if [ "$i" = 0 ]; then
+#   echo >&2 'MySQL init process failed.'
+#   exit 1
+# fi
+
+MYSQL_PWD='password' /usr/bin/mysql -uroot khanhvy_db < /databases/khanhvy_db.sql
+echo "===> Created khanhvy_db tables"

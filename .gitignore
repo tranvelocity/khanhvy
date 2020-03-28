@@ -1,0 +1,7 @@
+.env
+.idea/
+certs/
+certs-data/
+logs/
+!nginx/default*
+mysql/
