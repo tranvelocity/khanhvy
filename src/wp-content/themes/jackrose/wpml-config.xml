@@ -1,0 +1,9 @@
+<wpml-config> 
+	<admin-texts>
+		<key name="singlestroke_jackrose_customizer">
+			<key name="header_ribbon_text" />
+			<key name="hero_button_text" />
+			<key name="footer_copyright_text" />
+		</key>
+	</admin-texts>   
+</wpml-config>
