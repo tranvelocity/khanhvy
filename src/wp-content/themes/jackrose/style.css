@@ -621,7 +621,7 @@ label {
 }
 
 html #wpadminbar {
-	backface-visibility: hidden; /* fix Chrome glitch */	
+	backface-visibility: hidden; /* fix Chrome glitch */
 }
 @media ( max-width: 767px ) {
 	html #wpadminbar {
@@ -784,6 +784,7 @@ html #wpadminbar {
 
 #content {
 	padding: 100px 0;
+	background-color: #f7f7f7;
 }
 .page-template-one-page #content {
 	padding: 0;
@@ -2147,6 +2148,13 @@ html #wpadminbar {
 .jackrose-sow-gallery-grid-item img {
 	vertical-align: bottom;
 }
+.jackrose-sow-gallery-grid-item .attachment-grid {
+	border-radius: 50%;
+	width: 250px;
+	height: 250px;
+	overflow: hidden;
+}
+
 @media screen and ( max-width: 767px ) {
 	.jackrose-sow-gallery-grid .jackrose-sow-gallery-grid-item {
 		width: 100%;
@@ -2648,7 +2656,7 @@ div.wpcf7 img.ajax-loader {
 	right: 0;
 	margin-top: 1em;
 	color: #ccc;
-	font-size: 90%;	
+	font-size: 90%;
 }
 #gwolle_gb #gwolle_gb_entries .gb-entry .gwolle_gb_edit_link:hover, #gwolle_gb #gwolle_gb_entries .gb-entry .gwolle_gb_edit_link:focus {
 	color: #888;
