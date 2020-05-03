@@ -1,3 +1,0 @@
-
----Downloaded files---
-An error occurred while fetching file from: <strong>http://local.khanhvy.vn/wp-content/themes/jackrose/demo/default/posts.xml</strong>!<br>Reason: http_request_failed - cURL error 7: Failed to connect to local.khanhvy.vn port 80: Connection refused.<br>

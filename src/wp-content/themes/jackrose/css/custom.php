@@ -22,7 +22,7 @@ input[type="submit"],
 	font-family: <?php echo jackrose_format_font_family_css( esc_attr( jackrose_get_theme_mod( 'typography_menu_font_family' ) ) ); ?>;
 }
 .typography-section-heading {
-	font-family: <?php echo jackrose_format_font_family_css( esc_attr( jackrose_get_theme_mod( 'typography_section_heading_font_family' ) ) ); ?>;
+	#font-family: <?php echo jackrose_format_font_family_css( esc_attr( jackrose_get_theme_mod( 'typography_section_heading_font_family' ) ) ); ?>;
 }
 .typography-title,
 .typography-heading,
