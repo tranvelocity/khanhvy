@@ -3,9 +3,9 @@ Contributors: Arthur Gareginyan
 Tags: scroll to top, scroll up, scroll back, back to top, smooth scroll, back, to top, back top, back to top, go to top, bottom to top, back to up, scroll top, scroll up, page scroll up, one click scroll to top,link to top, back button, back to top button, arrow, button, navigation, back widget, scroll back to top, scroll me up, scroll to top, scroll to up, scroll top, scroll up, scroll up, scroll widget, scroll, scroller, scrolling, scroll up, simple back to top, simple scroll to top, smooth scroll to top, to top button, top button, top scroll, top, up button, up, vertical scroller
 Donate link: https://www.spacexchimp.com/donate.html
 Requires at least: 4.9
-Tested up to: 5.4
+Tested up to: 5.6
 Requires PHP: 5.6
-Stable tag: 4.37
+Stable tag: 4.42
 License: GPL3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -181,6 +181,24 @@ Commercial licensing (e.g. for projects that can’t use an open-source license)
 
 
 == Changelog ==
+
+= 4.42 - Jan 1, 2021 =
+* Maintenance: The copyright date updated to support the 2021 year.
+
+= 4.41 - Dec 8, 2020 =
+* Maintenance: Ensure compatibility with upcoming WordPress 5.6.
+
+= 4.40 - Oct 12, 2020 =
+* Fixed: On the plugin settings page, the height of the buttons is too small compared to the width.
+* Enhancement: The plugin settings page has been redesigned. The sidebar added to all tabs for better usability.
+
+= 4.39 - Oct 3, 2020 =
+* New feature: Restoring screen position after saving changes. No more annoying return to the top of the page after clicking the "Save" button on the plugin settings page.
+* Maintenance: Loading of dynamic content on the plugin settings page has been updated to more versatile.
+
+= 4.38 - Aug 10, 2020 =
+* Maintenance: Ensure compatibility with upcoming WordPress 5.5.
+* Enhancement: Change the color of some links on the "Plugins" page to the right emotional colors. (Thanks to Abdulla Hussain)
 
 = 4.37 - Mar 20, 2020 =
 * Maintenance: Ensure compatibility with upcoming WordPress 5.4.

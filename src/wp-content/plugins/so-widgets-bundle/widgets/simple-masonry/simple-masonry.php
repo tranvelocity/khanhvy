@@ -61,7 +61,8 @@ class SiteOrigin_Widget_Simple_Masonry_Widget extends SiteOrigin_Widget {
 				'fields' => array(
 					'image' => array(
 						'type' => 'media',
-						'label' => __( 'Image', 'so-widgets-bundle')
+						'label' => __( 'Image', 'so-widgets-bundle'),
+						'fallback' => true,
 					),
 					'column_span' => array(
 						'type' => 'slider',
@@ -182,7 +183,39 @@ class SiteOrigin_Widget_Simple_Masonry_Widget extends SiteOrigin_Widget {
 						'default' => 0
 					)
 				)
-			)
+			),
+			'preloader' => array(
+				'type' => 'section',
+				'label' => __( 'Preloader', 'so-widgets-bundle' ),
+				'hide' => true,
+				'fields' => array(
+					'enabled' => array(
+						'type' => 'checkbox',
+						'label' => __( 'Enable preloader', 'so-widgets-bundle' )
+					),
+					'color' => array(
+						'type' => 'color',
+						'label' => __( 'Preloader icon color', 'so-widgets-bundle' ),
+						'default' => '#232323'
+					),
+					'height' => array(
+						'type' => 'measurement',
+						'label' => __( 'Preloader height', 'so-widgets-bundle' ),
+						'default' => '250px',
+						'description' => __( 'The size of the preloader prior to the Masonry images showing.', 'so-widgets-bundle' )
+					)
+				)
+			),
+			'layout_origin_left' => array(
+				'type' => 'select',
+				'label' => __( 'Layout origin', 'so-widgets-bundle' ),
+				'description' => __( 'Controls the horizontal flow of the layout. Items can either start positioned on the left or right.', 'so-widgets-bundle' ),
+				'default' => 'true',
+				'options' => array(
+					'true' => __( 'Left', 'so-widgets-bundle' ),
+					'false' => __( 'Right', 'so-widgets-bundle' ),
+				),
+			),
 		);
 	}
 
@@ -196,11 +229,13 @@ class SiteOrigin_Widget_Simple_Masonry_Widget extends SiteOrigin_Widget {
 				$link_atts['rel'] = 'noopener noreferrer';
 			}
 			$item['link_attributes'] = $link_atts;
+			$item['title'] = $this->get_image_title( $item );
 		}
-		
 		return array(
 			'args' => $args,
 			'items' => $items,
+			'preloader_enabled' => ! empty( $instance['preloader']['enabled'] ) ? true : false,
+			'layout_origin_left' => ! empty( $instance['layout_origin_left'] ) ? $instance['layout_origin_left'] : 'true',
 			'layouts' => array(
 				'desktop' => siteorigin_widgets_underscores_to_camel_case(
 					array(
@@ -228,6 +263,46 @@ class SiteOrigin_Widget_Simple_Masonry_Widget extends SiteOrigin_Widget {
 			)
 		);
 	}
+
+	/**
+	 * Try to figure out an image's title for display.
+	 *
+	 * @param $image
+	 *
+	 * @return string The title of the image.
+	 */
+	private function get_image_title( $image ) {
+		if ( ! empty( $image['title'] ) ) {
+			$title = $image['title'];
+		} else if ( apply_filters( 'siteorigin_widgets_auto_title', true, 'sow-simple-masonry' ) ) {
+			$title = wp_get_attachment_caption( $image['image'] );
+			if ( empty( $title ) ) {
+				// We do not want to use the default image titles as they're based on the file name without the extension
+				$file_name = pathinfo( get_post_meta( $image['image'], '_wp_attached_file', true ), PATHINFO_FILENAME );
+				$title = get_the_title( $image['image'] );
+				if ( $title == $file_name ) {
+					return;
+				}
+			}
+		} else {
+			$title = '';
+		}
+
+		return $title;
+	}
+
+	public function get_less_variables( $instance ) {
+		if ( empty( $instance['preloader'] ) || ! $instance['preloader']['enabled'] ) {
+			return array();
+		}
+		
+		return array(
+			'preloader_enabled' => 'true',
+			'preloader_height' => $instance['preloader']['height'],
+			'preloader_color' => $instance['preloader']['color']
+		);
+	}
+	
 
 	function get_form_teaser(){
 		if( class_exists( 'SiteOrigin_Premium' ) ) return false;

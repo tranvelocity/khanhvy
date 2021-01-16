@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WordPress - 5.4.x - Development package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-05-02 01:15:49+0000\n"
+"PO-Revision-Date: 2020-06-10 04:20:42+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -76,6 +76,10 @@ msgstr "number_format_thousands_sep"
 #: wp-includes/class-wp-locale.php:208
 msgid "number_format_decimal_point"
 msgstr "number_format_decimal_point"
+
+#: wp-includes/rest-api.php:50
+msgid "Namespace must not start or end with a slash."
+msgstr "ネームスペースの文頭または文末に \"/\" を置くことはできません。"
 
 #. translators: 1: Type of block (i.e. Text, Image etc)
 #: wp-includes/js/dist/block-editor.js:23760
@@ -528,7 +532,7 @@ msgstr "エディターのフッター"
 
 #: wp-includes/js/dist/block-editor.js:18711
 msgid "Select a variation to start with."
-msgstr "最初に適用するパターンを選択します。"
+msgstr "開始時のパターンを選択します。"
 
 #: wp-includes/js/dist/block-editor.js:18709
 msgid "Choose variation"
@@ -644,7 +648,7 @@ msgstr "(色: %s)"
 
 #: wp-includes/js/dist/editor.js:11253
 msgid "Slug"
-msgstr "スラッグ "
+msgstr "スラッグ"
 
 #: wp-includes/js/dist/editor.js:9392
 msgid "Update…"
@@ -727,7 +731,7 @@ msgstr "特大"
 
 #: wp-includes/js/dist/components.js:33396
 msgid "Small"
-msgstr "小さい"
+msgstr "小"
 
 #: wp-includes/js/dist/components.js:23619
 msgid "Angle"
@@ -1074,7 +1078,7 @@ msgstr "インラインで再生"
 
 #: wp-includes/js/dist/block-library.js:21325
 msgid "Note: Autoplaying videos may cause usability issues for some visitors."
-msgstr "注: 動画の自動再生は、ビジターによってはユーザビリティの問題を引き起こす可能性があります。"
+msgstr "注: 動画の自動再生をすると、訪問者によってはユーザビリティ上の問題が発生する可能性があります。"
 
 #: wp-includes/js/dist/block-library.js:8940
 msgid "Note: Autoplaying audio may cause usability issues for some visitors."
@@ -1108,7 +1112,7 @@ msgstr "2カラム: 1/3、2/3に分割"
 
 #: wp-includes/js/dist/block-library.js:11178
 msgid "Two columns; equal split"
-msgstr "2カラム: 均等割"
+msgstr "2カラム: 等分"
 
 #: wp-includes/js/dist/block-library.js:9906
 msgid "Fill"
@@ -1273,11 +1277,11 @@ msgstr "ギャラリーのキャプションを入力…"
 
 #: wp-includes/js/dist/block-library.js:7672
 msgid "Move image forward"
-msgstr "画像を前に移動"
+msgstr "画像を前方に移動"
 
 #: wp-includes/js/dist/block-library.js:7665
 msgid "Move image backward"
-msgstr "画像を後ろに移動"
+msgstr "画像を後方に移動"
 
 #: wp-includes/js/dist/block-library.js:6389
 msgid "Code is Poetry"
@@ -1337,7 +1341,7 @@ msgstr "グループ"
 
 #: wp-includes/js/dist/block-library.js:12793
 msgid "Learn more about embeds"
-msgstr "埋め込みの詳細"
+msgstr "埋め込みについてさらに詳しく"
 
 #: wp-includes/js/dist/block-library.js:12792
 msgid "https://wordpress.org/support/article/embeds/"
@@ -1390,7 +1394,7 @@ msgstr "複数クラスを半角スペースで区切ります。"
 
 #: wp-includes/js/dist/block-editor.js:26249
 msgid "Learn more about anchors"
-msgstr "アンカーの詳細"
+msgstr "アンカーについてさらに詳しく"
 
 #: wp-includes/js/dist/block-editor.js:26247
 msgid "Enter a word or two — without spaces — to make a unique web address just for this heading, called an “anchor.” Then, you’ll be able to link directly to this section of your page."
@@ -1520,7 +1524,7 @@ msgstr[0] "この作者はブロック%d個を登録していて、評価平均�
 
 #: wp-includes/js/dist/block-directory.js:1282
 msgid "Authored by %s"
-msgstr "作者: %s"
+msgstr "投稿者: %s"
 
 #. translators: %d: number of ratings (number).
 #: wp-includes/js/dist/block-directory.js:1212
@@ -1718,7 +1722,7 @@ msgstr "必須要件不足"
 msgid "The %1$s, %2$s, and %3$s values can be edited to set the video track language and kind."
 msgstr "%1$s、 %2$s、と %3$s 値で、動画の言語と種類を設定できます。"
 
-#: wp-includes/comment.php:3498
+#: wp-includes/comment.php:3503
 msgid "User&#8217;s comment data."
 msgstr "ユーザーのコメントデータ"
 
@@ -2072,7 +2076,7 @@ msgstr "URL を使用"
 
 #: wp-includes/js/dist/block-library.js:18196
 msgid "Enter URL here…"
-msgstr "URLをここに入力..."
+msgstr "URL をここに入力…"
 
 #: wp-includes/js/dist/block-library.js:18415
 msgid "find"
@@ -2084,7 +2088,7 @@ msgstr "訪問者がコンテンツを見つけられるよう手助けしまし
 
 #: wp-includes/js/dist/block-library.js:18387
 msgid "Add button text…"
-msgstr "ボタンのテキストを追加..."
+msgstr "ボタンのテキストを追加…"
 
 #: wp-includes/js/dist/block-library.js:18386
 msgid "Button text"
@@ -2363,7 +2367,7 @@ msgstr "サイトアイコンを選択"
 
 #: wp-includes/user.php:3593
 msgid "An incomplete request for this email address already exists."
-msgstr "このメールアドレスに対する未完了のリクエストが既に存在します。"
+msgstr "このメールアドレスに対する未完了のリクエストがすでに存在します。"
 
 #: wp-includes/class-wp-customize-widgets.php:780
 msgid "Keep widget settings and move it to the inactive widgets"
@@ -2460,7 +2464,7 @@ msgid "Embed Crowdsignal (formerly Polldaddy) content."
 msgstr "Crowdsignal (旧 Polldaddy) コンテンツを埋め込みます。"
 
 #. translators: %s: rest_api_init
-#: wp-includes/rest-api.php:52
+#: wp-includes/rest-api.php:58
 msgid "REST API routes must be registered on the %s action."
 msgstr "REST API ルートは %s アクションで登録しなければなりません。"
 
@@ -2475,8 +2479,8 @@ msgid "Failed <span class=\"count\">(%s)</span>"
 msgid_plural "Failed <span class=\"count\">(%s)</span>"
 msgstr[0] "失敗 <span class=\"count\">(%s)</span>"
 
-#: wp-includes/class-walker-comment.php:271
-#: wp-includes/class-walker-comment.php:361
+#: wp-includes/class-walker-comment.php:304
+#: wp-includes/class-walker-comment.php:402
 msgid "Your comment is awaiting moderation. This is a preview, your comment will be visible after it has been approved."
 msgstr "あなたのコメントは管理者の承認待ちです。これはプレビューで、コメントは承認後に表示されます。"
 
@@ -3271,7 +3275,7 @@ msgstr "画像の切り抜き"
 
 #: wp-includes/js/dist/block-library.js:7858
 msgid "Drag images, upload new ones or select files from your library."
-msgstr "画像をドラッグして新しくアップロードするか、ライブラリからファイルを選択してください。 "
+msgstr "画像をドラッグするか、新規アップロードするか、ライブラリからファイルを選択してください。"
 
 #: wp-includes/js/dist/block-library.js:8078
 msgid "Thumbnails are not cropped."
@@ -3782,7 +3786,7 @@ msgstr[0] "%d個のブロック"
 
 #: wp-includes/js/dist/edit-post.js:4924
 msgid "Visibility"
-msgstr "公開状態"
+msgstr "表示状態"
 
 #: wp-includes/js/dist/edit-post.js:5161
 msgid "Status & visibility"
@@ -4450,7 +4454,7 @@ msgstr "画像の編集または更新"
 
 #: wp-includes/js/dist/editor.js:8213
 msgid "Learn more about manual excerpts"
-msgstr "手動抜粋の詳細"
+msgstr "手動抜粋についてさらに詳しく"
 
 #: wp-includes/js/dist/editor.js:8205
 msgid "Write an excerpt (optional)"
@@ -4470,7 +4474,7 @@ msgstr "タイトルはありません"
 
 #: wp-includes/js/dist/editor.js:7792
 msgid "Order"
-msgstr "並び順"
+msgstr "順序"
 
 #: wp-includes/js/dist/block-editor.js:21093
 msgid "Paste or type URL"
@@ -4736,12 +4740,12 @@ msgstr "カテゴリー"
 #. translators: label for ordering posts by title in descending order
 #: wp-includes/js/dist/components.js:39269
 msgid "Z → A"
-msgstr "タイトル"
+msgstr "Z → A"
 
 #. translators: label for ordering posts by title in ascending order
 #: wp-includes/js/dist/components.js:39265
 msgid "A → Z"
-msgstr "タイトル (逆順)"
+msgstr "A → Z"
 
 #: wp-includes/js/dist/components.js:39261
 msgid "Oldest to newest"
@@ -4758,7 +4762,7 @@ msgstr "並び順"
 #: wp-includes/js/dist/components.js:11791
 #: wp-includes/js/dist/components.js:38799
 msgid "Dismiss this notice"
-msgstr "通知を無視"
+msgstr "この通知を非表示"
 
 #. translators: 1: term name, 2: term position in a set of terms, 3: total term
 #. set count.
@@ -5459,7 +5463,7 @@ msgstr "ユーザーのログイン名"
 
 #: wp-includes/user.php:2969
 msgid "User ID"
-msgstr "ユーザーの ID"
+msgstr "ユーザー ID"
 
 #: wp-includes/user.php:2935
 msgid "WordPress User"
@@ -5525,7 +5529,7 @@ msgid "[deleted]"
 msgstr "[削除済み]"
 
 #. translators: %d: Comment ID.
-#: wp-includes/comment.php:3599
+#: wp-includes/comment.php:3604
 msgid "Comment %d contains personal data but could not be anonymized."
 msgstr "コメント %d には個人データが含まれていますが、匿名化できませんでした。"
 
@@ -5628,39 +5632,39 @@ msgctxt "request status"
 msgid "Pending"
 msgstr "保留中"
 
-#: wp-includes/comment.php:3454
+#: wp-includes/comment.php:3459
 msgid "Comment URL"
 msgstr "コメント URL"
 
-#: wp-includes/comment.php:3453
+#: wp-includes/comment.php:3458
 msgid "Comment Content"
 msgstr "コメント本文"
 
-#: wp-includes/comment.php:3452
+#: wp-includes/comment.php:3457
 msgid "Comment Date"
 msgstr "コメント日付"
 
-#: wp-includes/comment.php:3451
+#: wp-includes/comment.php:3456
 msgid "Comment Author User Agent"
 msgstr "コメント投稿者ユーザーエージェント"
 
-#: wp-includes/comment.php:3450
+#: wp-includes/comment.php:3455
 msgid "Comment Author IP"
 msgstr "コメント投稿者 IP アドレス"
 
-#: wp-includes/comment.php:3449
+#: wp-includes/comment.php:3454
 msgid "Comment Author URL"
 msgstr "コメント投稿者 URL"
 
-#: wp-includes/comment.php:3448
+#: wp-includes/comment.php:3453
 msgid "Comment Author Email"
 msgstr "コメント投稿者メールアドレス"
 
-#: wp-includes/comment.php:3447
+#: wp-includes/comment.php:3452
 msgid "Comment Author"
 msgstr "コメント投稿者"
 
-#: wp-includes/comment.php:3412 wp-includes/comment.php:3522
+#: wp-includes/comment.php:3417 wp-includes/comment.php:3527
 msgid "WordPress Comments"
 msgstr "WordPress コメント"
 
@@ -5727,7 +5731,7 @@ msgid "Installed"
 msgstr "インストール済み"
 
 #. translators: %s: Property of an object.
-#: wp-includes/rest-api.php:1279
+#: wp-includes/rest-api.php:1285
 msgid "%1$s is not a valid property of Object."
 msgstr "%1$s はオブジェクトのプロパティが有効ではありません。"
 
@@ -6303,7 +6307,7 @@ msgstr "ご利用のブラウザーは Flash Player が無効になっている�
 #. translators: %s: register_routes()
 #: wp-includes/rest-api/endpoints/class-wp-rest-controller.php:52
 msgid "Method '%s' must be overridden."
-msgstr "メソッド「%s」を上書きする必要があります。"
+msgstr "メソッド '%s' を上書きする必要があります。"
 
 #: wp-includes/post.php:227
 msgid "oEmbed Response"
@@ -6323,7 +6327,7 @@ msgstr "%s:"
 #. Comment author's hostname.
 #: wp-includes/pluggable.php:1608 wp-includes/pluggable.php:1792
 msgid "Author: %1$s (IP address: %2$s, %3$s)"
-msgstr "作者: %1$s (IP アドレス: %2$s, %3$s)"
+msgstr "投稿者: %1$s (IP アドレス: %2$s, %3$s)"
 
 #. translators: 1: Trackback/pingback website name, 2: Website IP address, 3:
 #. Website hostname.
@@ -6792,7 +6796,7 @@ msgstr "音声ファイルを追加"
 
 #: wp-includes/media.php:3476
 msgid "(no author)"
-msgstr "(作成者なし)"
+msgstr "(投稿者なし)"
 
 #. translators: %s: The name of a city.
 #: wp-includes/script-loader.php:2049
@@ -7077,22 +7081,22 @@ msgid "Updated!"
 msgstr "更新しました。"
 
 #. translators: 1: Parameter, 2: Maximum number.
-#: wp-includes/rest-api.php:1365
+#: wp-includes/rest-api.php:1371
 msgid "%1$s must be less than or equal to %2$d"
 msgstr "%1$s は%2$d以下である必要があります"
 
 #. translators: 1: Parameter, 2: Maximum number.
-#: wp-includes/rest-api.php:1362
+#: wp-includes/rest-api.php:1368
 msgid "%1$s must be less than %2$d"
 msgstr "%1$s は%2$d未満である必要があります"
 
 #. translators: 1: Parameter, 2: Minimum number.
-#: wp-includes/rest-api.php:1357
+#: wp-includes/rest-api.php:1363
 msgid "%1$s must be greater than or equal to %2$d"
 msgstr "%1$s は%2$d以上である必要があります"
 
 #. translators: 1: Parameter, 2: Minimum number.
-#: wp-includes/rest-api.php:1354
+#: wp-includes/rest-api.php:1360
 msgid "%1$s must be greater than %2$d"
 msgstr "%1$s は%2$dよりも大きい必要があります"
 
@@ -7199,7 +7203,7 @@ msgstr "推奨画像サイズ: %1$s×%2$sピクセル"
 msgid "Sorry, this file type is not permitted for security reasons."
 msgstr "このファイルタイプはセキュリティ上の理由から、許可されていません。"
 
-#: wp-includes/comment.php:3295
+#: wp-includes/comment.php:3300
 msgid "Sorry, comments are not allowed for this item."
 msgstr "この項目へのコメントは受け付けていません。"
 
@@ -7526,7 +7530,7 @@ msgid "Invalid slug."
 msgstr "無効なスラッグです。"
 
 #: wp-includes/rest-api/endpoints/class-wp-rest-users-controller.php:717
-#: wp-includes/rest-api.php:1338 wp-includes/user.php:3568
+#: wp-includes/rest-api.php:1344 wp-includes/user.php:3568
 msgid "Invalid email address."
 msgstr "無効なメールアドレスです。"
 
@@ -7543,7 +7547,7 @@ msgstr "無効な JSONP コールバック関数です。"
 msgid "Invalid page template."
 msgstr "無効なページテンプレートです。"
 
-#: wp-includes/script-loader.php:1211 wp-includes/rest-api.php:1332
+#: wp-includes/script-loader.php:1211 wp-includes/rest-api.php:1338
 #: wp-includes/post.php:3739
 msgid "Invalid date."
 msgstr "無効な日時です。"
@@ -7840,7 +7844,7 @@ msgstr "アクセス"
 
 #: wp-includes/rest-api/endpoints/class-wp-rest-users-controller.php:1294
 msgid "Passwords cannot contain the \"\\\" character."
-msgstr "パスワードに\"\\\"文字を含めることはできません。 "
+msgstr "パスワードに \"\\\" 記号を含めることはできません。 "
 
 #: wp-includes/rest-api/endpoints/class-wp-rest-users-controller.php:1286
 msgid "Passwords cannot be empty."
@@ -8019,42 +8023,42 @@ msgid "Item selected."
 msgstr "項目を選択しました。"
 
 #. translators: 1: Parameter, 2: Minimum number, 3: Maximum number.
-#: wp-includes/rest-api.php:1386
+#: wp-includes/rest-api.php:1392
 msgid "%1$s must be between %2$d (inclusive) and %3$d (inclusive)"
 msgstr "%1$s は%2$d以上、%3$d以下でなければなりません。"
 
 #. translators: 1: Parameter, 2: Minimum number, 3: Maximum number.
-#: wp-includes/rest-api.php:1381
+#: wp-includes/rest-api.php:1387
 msgid "%1$s must be between %2$d (exclusive) and %3$d (inclusive)"
 msgstr "%1$s は%2$dより大きく、%3$d以内でなければなりません。"
 
 #. translators: 1: Parameter, 2: Minimum number, 3: Maximum number.
-#: wp-includes/rest-api.php:1376
+#: wp-includes/rest-api.php:1382
 msgid "%1$s must be between %2$d (inclusive) and %3$d (exclusive)"
 msgstr "%1$s は%2$d以上、%3$d未満でなければなりません。"
 
 #. translators: 1: Parameter, 2: Minimum number, 3: Maximum number.
-#: wp-includes/rest-api.php:1371
+#: wp-includes/rest-api.php:1377
 msgid "%1$s must be between %2$d (exclusive) and %3$d (exclusive)"
 msgstr "%1$s は%2$dより大きく、%3$d未満でなければなりません。"
 
 #. translators: %s: IP address.
-#: wp-includes/rest-api.php:1344
+#: wp-includes/rest-api.php:1350
 msgid "%s is not a valid IP address."
 msgstr "%s は有効な IP アドレスではありません。"
 
 #. translators: 1: Parameter, 2: List of types.
 #. translators: 1: Parameter, 2: Type name.
-#: wp-includes/rest-api.php:1231 wp-includes/rest-api.php:1241
-#: wp-includes/rest-api.php:1267 wp-includes/rest-api.php:1295
-#: wp-includes/rest-api.php:1310 wp-includes/rest-api.php:1315
-#: wp-includes/rest-api.php:1320 wp-includes/rest-api.php:1325
+#: wp-includes/rest-api.php:1237 wp-includes/rest-api.php:1247
+#: wp-includes/rest-api.php:1273 wp-includes/rest-api.php:1301
+#: wp-includes/rest-api.php:1316 wp-includes/rest-api.php:1321
+#: wp-includes/rest-api.php:1326 wp-includes/rest-api.php:1331
 msgid "%1$s is not of type %2$s."
 msgstr "%1$s は %2$s タイプではありません。"
 
 #. translators: 1: Parameter, 2: List of valid values.
 #: wp-includes/rest-api/endpoints/class-wp-rest-posts-controller.php:1363
-#: wp-includes/rest-api.php:1304
+#: wp-includes/rest-api.php:1310
 msgid "%1$s is not one of %2$s."
 msgstr "%1$s は %2$s に当てはまりません。"
 
@@ -8537,7 +8541,7 @@ msgstr "入力された ISO8601 準拠の日付より前に公開された投稿
 
 #: wp-includes/rest-api/endpoints/class-wp-rest-comments-controller.php:1571
 msgid "Limit result set to that from a specific author email. Requires authorization."
-msgstr "特定の作成者のメールに合致するものに結果を限定します。"
+msgstr "特定の投稿者のメールからのものに結果を限定します。認証が必要です。"
 
 #: wp-includes/rest-api/endpoints/class-wp-rest-comments-controller.php:1562
 msgid "Ensure result set excludes comments assigned to specific user IDs. Requires authorization."
@@ -8626,7 +8630,7 @@ msgstr "オブジェクトの作成者のメールアドレス。"
 
 #: wp-includes/rest-api/endpoints/class-wp-rest-comments-controller.php:1392
 msgid "The ID of the user object, if author was a user."
-msgstr "作成者がユーザーだった場合の、ユーザーオブジェクトの ID。"
+msgstr "投稿者がユーザーだった場合の、ユーザーオブジェクトの ID。"
 
 #: wp-includes/rest-api/endpoints/class-wp-rest-comments-controller.php:74
 #: wp-includes/rest-api/endpoints/class-wp-rest-comments-controller.php:1386
@@ -8669,12 +8673,12 @@ msgstr "コメントするには、有効なコメントの投稿者名とメー
 
 #: wp-includes/rest-api/endpoints/class-wp-rest-comments-controller.php:569
 msgid "Cannot create existing comment."
-msgstr "すでにあるコメントをすることはできません。"
+msgstr "既存のコメントを作成することはできません。"
 
 #: wp-includes/class-wp-xmlrpc-server.php:3852
 #: wp-includes/rest-api/endpoints/class-wp-rest-comments-controller.php:446
 #: wp-includes/rest-api/endpoints/class-wp-rest-comments-controller.php:468
-#: wp-includes/comment.php:3347
+#: wp-includes/comment.php:3352
 msgid "Sorry, you must be logged in to comment."
 msgstr "コメントするにはログインする必要があります。"
 
@@ -8924,7 +8928,7 @@ msgstr "テーマを変更"
 
 #: wp-includes/customize/class-wp-customize-theme-control.php:102
 msgid "Update now"
-msgstr "いますぐ更新"
+msgstr "今すぐ更新"
 
 #. translators: %s: "Update now" button.
 #: wp-includes/customize/class-wp-customize-theme-control.php:101
@@ -9053,7 +9057,7 @@ msgstr "背景の繰り返しの値が無効です。"
 
 #: wp-includes/class-wp-customize-manager.php:5624
 msgid "Learn more about CSS"
-msgstr "CSS について詳細を読む"
+msgstr "CSS についてさらに詳しく"
 
 #: wp-includes/class-wp-customize-manager.php:5660
 msgid "Additional CSS"
@@ -9151,7 +9155,7 @@ msgstr "%d件のテーマが見つかりました"
 
 #: wp-includes/class-wp-customize-manager.php:4865
 msgid "Are you sure you want to delete this theme?"
-msgstr "本当にこのテーマを削除してもよいですか？"
+msgstr "本当にこのテーマを削除してもよいですか ?"
 
 #: wp-includes/class-wp-customize-manager.php:2337
 msgid "Unauthorized to modify setting due to capability."
@@ -9375,7 +9379,7 @@ msgstr "固定レイアウト"
 
 #: wp-includes/class-wp-theme.php:960
 msgid "Dark"
-msgstr "ダーク"
+msgstr "ダークカラー"
 
 #: wp-includes/class-wp-theme.php:957
 msgid "Tan"
@@ -10050,7 +10054,7 @@ msgstr "投稿タイトル:"
 
 #: wp-mail.php:244
 msgid "Author:"
-msgstr "作成者:"
+msgstr "投稿者:"
 
 #: wp-includes/wp-db.php:1844
 msgid "Are you sure the database server is not under particularly heavy load?"
@@ -10158,24 +10162,24 @@ msgstr "無効ショートコード名: 空の名前が指定されています�
 msgid "Permalink saved"
 msgstr "パーマリンクを保存しました"
 
-#: wp-includes/rest-api.php:917
+#: wp-includes/rest-api.php:923
 msgid "Cookie nonce is invalid"
 msgstr "Cookie nonce が不正です"
 
 #. translators: 1: Function name, 2: WordPress version number, 3: Error
 #. message.
-#: wp-includes/rest-api.php:565
+#: wp-includes/rest-api.php:571
 msgid "%1$s (since %2$s; %3$s)"
 msgstr "%1$s (%2$s 以降。%3$s)"
 
 #. translators: 1: Function name, 2: WordPress version number.
-#: wp-includes/rest-api.php:544 wp-includes/rest-api.php:568
+#: wp-includes/rest-api.php:550 wp-includes/rest-api.php:574
 msgid "%1$s (since %2$s; no alternative available)"
 msgstr "%1$s (%2$s 以降。代替関数なし)"
 
 #. translators: 1: Function name, 2: WordPress version number, 3: New function
 #. name.
-#: wp-includes/rest-api.php:541
+#: wp-includes/rest-api.php:547
 msgid "%1$s (since %2$s; use %3$s instead)"
 msgstr "%1$s (%2$s 以降。代わりに %3$s を使ってください)"
 
@@ -10568,11 +10572,11 @@ msgstr "登録確認のメールが送信されます。"
 
 #: wp-includes/script-loader.php:1099
 msgid "Hide"
-msgstr "隠す"
+msgstr "非表示"
 
 #: wp-includes/script-loader.php:1098
 msgid "Show"
-msgstr "表示する"
+msgstr "表示"
 
 #: wp-includes/script-loader.php:1087
 msgctxt "password mismatch"
@@ -11177,7 +11181,7 @@ msgstr "変更"
 
 #: wp-includes/script-loader.php:616
 msgid "Dismiss this notice."
-msgstr "この通知を非表示にする"
+msgstr "この通知を非表示にする。"
 
 #. translators: 1: Number of comments, 2: Post title.
 #: wp-includes/theme-compat/comments.php:44
@@ -11572,12 +11576,12 @@ msgstr "タグ: %s"
 #. translators: Author archive title. %s: Author name.
 #: wp-includes/general-template.php:1570
 msgid "Author: %s"
-msgstr "作者別: %s"
+msgstr "投稿者: %s"
 
 #. translators: Yearly archive title. %s: Year.
 #: wp-includes/general-template.php:1573
 msgid "Year: %s"
-msgstr "年別: %s"
+msgstr "年: %s"
 
 #: wp-includes/general-template.php:1582
 msgctxt "post format archive title"
@@ -11593,7 +11597,7 @@ msgstr "Y年n月j日"
 #. translators: Daily archive title. %s: Date.
 #: wp-includes/general-template.php:1579
 msgid "Day: %s"
-msgstr "日別: %s"
+msgstr "日: %s"
 
 #. translators: Monthly archive title. %s: Month name and year.
 #: wp-includes/general-template.php:1576
@@ -11845,11 +11849,11 @@ msgstr "前のメディア項目を編集"
 
 #: wp-includes/media-template.php:322
 msgid "Grid View"
-msgstr "グリッドビュー"
+msgstr "グリッド表示"
 
 #: wp-includes/media-template.php:319
 msgid "List View"
-msgstr "リストビュー"
+msgstr "リスト表示"
 
 #. translators: %s: Maximum allowed file size.
 #: wp-includes/media-template.php:292
@@ -11886,7 +11890,7 @@ msgstr "ウィジェットはコンテンツから独立したセクションで
 msgid "You are customizing %s"
 msgstr "%s をカスタマイズ中です"
 
-#: wp-includes/comment.php:3396
+#: wp-includes/comment.php:3401
 msgid "<strong>Error</strong>: The comment could not be saved. Please try again later."
 msgstr "<strong>エラー</strong>: コメントを保存できませんでした。後ほどもう一度お試しください。"
 
@@ -12155,7 +12159,7 @@ msgstr "無視"
 #: wp-includes/class-wp-editor.php:1293
 msgctxt "spellcheck"
 msgid "Ignore all"
-msgstr "全て無視"
+msgstr "すべて無視"
 
 #: wp-includes/class-wp-editor.php:1292
 msgctxt "spellcheck"
@@ -12863,7 +12867,7 @@ msgstr "ログイン、RSS、WordPress.org へのリンク"
 
 #: wp-includes/widgets/class-wp-widget-archives.php:27
 msgid "A monthly archive of your site&#8217;s Posts."
-msgstr "投稿の月別アーカイブ"
+msgstr "投稿の月別アーカイブ。"
 
 #: wp-includes/widgets/class-wp-widget-search.php:27
 msgid "A search form for your site."
@@ -13094,8 +13098,8 @@ msgid "The login page will open in a new tab. After logging in you can close it 
 msgstr "新しいタブでログインページを開きます。ログイン後、そちらを閉じてこのページに戻ることができます。"
 
 #. translators: %s: Comment author link.
-#: wp-includes/class-walker-comment.php:287
-#: wp-includes/class-walker-comment.php:377
+#: wp-includes/class-walker-comment.php:326
+#: wp-includes/class-walker-comment.php:423
 msgid "%s <span class=\"says\">says:</span>"
 msgstr "%s <span class=\"says\">より:</span>"
 
@@ -13192,7 +13196,7 @@ msgstr "アップロード上限超過"
 
 #: wp-includes/media-template.php:329
 msgid "Dismiss Errors"
-msgstr "エラーを非表示にする"
+msgstr "エラーを非表示"
 
 #: wp-includes/media-template.php:328
 msgid "Uploading"
@@ -13342,7 +13346,7 @@ msgstr "すでに WordPress をインストール済みのようです。再イ�
 
 #: wp-includes/ms-deprecated.php:617
 msgid "Already Installed"
-msgstr "すでにインストールされています"
+msgstr "インストール済み"
 
 #. translators: New user notification email. %s: Activation URL.
 #: wp-includes/ms-functions.php:1095
@@ -13802,7 +13806,7 @@ msgstr "テンプレート"
 
 #: wp-includes/widgets/class-wp-widget-links.php:177
 msgid "Number of links to show:"
-msgstr " 表示するリンクの数:"
+msgstr "表示するリンクの数:"
 
 #: wp-includes/widgets/class-wp-widget-links.php:162
 msgid "Link ID"
@@ -13946,7 +13950,7 @@ msgstr "このカテゴリーを削除する権限がありません。"
 #: wp-includes/class-wp-xmlrpc-server.php:5381
 #: wp-includes/rest-api/endpoints/class-wp-rest-posts-controller.php:1158
 msgid "Invalid author ID."
-msgstr "無効な作成者 ID です。"
+msgstr "無効な投稿者 ID。"
 
 #: wp-includes/class-wp-xmlrpc-server.php:1947
 #: wp-includes/class-wp-xmlrpc-server.php:4490
@@ -14083,15 +14087,15 @@ msgstr "%s は、このサイトのアップロードサイズ上限を超えて
 msgid "Feedback"
 msgstr "フィードバック"
 
-#: wp-includes/comment.php:3355
+#: wp-includes/comment.php:3360
 msgid "<strong>Error</strong>: Please fill the required fields (name, email)."
 msgstr "<strong>エラー</strong>: 必須項目 (名前、メールアドレス) を入力してください。"
 
-#: wp-includes/comment.php:3357
+#: wp-includes/comment.php:3362
 msgid "<strong>Error</strong>: Please enter a valid email address."
 msgstr "<strong>エラー</strong>: 有効なメールアドレスを入力してください。"
 
-#: wp-includes/comment.php:3382
+#: wp-includes/comment.php:3387
 msgid "<strong>Error</strong>: Please type a comment."
 msgstr "<strong>エラー</strong>: コメントを入力してください。"
 
@@ -14241,7 +14245,7 @@ msgstr "投稿ナビゲーション"
 msgid "Link to %s"
 msgstr "%s へのリンク"
 
-#: wp-includes/class-walker-comment.php:242
+#: wp-includes/class-walker-comment.php:250
 msgid "Pingback:"
 msgstr "ピンバック:"
 
@@ -14271,7 +14275,7 @@ msgstr "ポスター"
 
 #: wp-includes/js/dist/editor.js:12817
 msgid "Words"
-msgstr "語"
+msgstr "単語"
 
 #: wp-includes/class-http.php:299
 msgid "Destination directory for file streaming does not exist or is not writable."
@@ -14483,7 +14487,7 @@ msgstr "もしこれが間違いだった場合は、このメールを無視す
 
 #: wp-login.php:418
 msgid "Someone has requested a password reset for the following account:"
-msgstr "だれかが次のアカウントのパスワードリセットをリクエストしました:"
+msgstr "どなたかが次のアカウントのパスワードリセットをリクエストしました:"
 
 #: wp-login.php:950
 msgid "Your password has been reset."
@@ -14596,7 +14600,7 @@ msgstr "Y年n月"
 #. translators: Used to join items in a list with only 2 items.
 #: wp-includes/formatting.php:5072
 msgid "%1$s and %2$s"
-msgstr "%1$sと%2$s"
+msgstr "%1$s、%2$s"
 
 #: wp-includes/taxonomy.php:565
 msgid "Choose from the most used tags"
@@ -14940,7 +14944,7 @@ msgstr "4字以上のアルファベットと数字のみが使えます。変�
 
 #: wp-includes/script-loader.php:1413
 msgid "Are you sure you want to install this plugin?"
-msgstr "本当にこのプラグインをインストールしてもいいですか ?"
+msgstr "本当にこのプラグインをインストールしてもよいですか ?"
 
 #: wp-includes/script-loader.php:1572
 msgid "Use as featured image"
@@ -15070,17 +15074,17 @@ msgstr "ファイルをキャンセルしました。"
 #. translators: %s: Post title.
 #: wp-includes/pluggable.php:1789
 msgid "A new comment on the post \"%s\" is waiting for your approval"
-msgstr "投稿「%s」への新しいコメントが承認待ちです。"
+msgstr "投稿「%s」への新しいコメントが承認待ちです"
 
 #. translators: %s: Post title.
 #: wp-includes/pluggable.php:1778
 msgid "A new pingback on the post \"%s\" is waiting for your approval"
-msgstr "投稿「%s」への新しいピンバックが承認待ちです。"
+msgstr "投稿「%s」への新しいピンバックが承認待ちです"
 
 #. translators: %s: Post title.
 #: wp-includes/pluggable.php:1767
 msgid "A new trackback on the post \"%s\" is waiting for your approval"
-msgstr "投稿「%s」への新しいトラックバックが承認待ちです。"
+msgstr "投稿「%s」への新しいトラックバックが承認待ちです"
 
 #. translators: %s: Post title.
 #: wp-includes/pluggable.php:1592
@@ -15402,7 +15406,7 @@ msgstr "エラー: %s"
 #. translators: %s: Post author email address.
 #: wp-mail.php:135
 msgid "Author is %s"
-msgstr "作成者は %s です。"
+msgstr "投稿者は %s です"
 
 #: wp-mail.php:65
 msgid "There doesn&#8217;t seem to be any new mail."
@@ -15795,11 +15799,11 @@ msgstr "ホーム"
 
 #: wp-includes/post-template.php:935
 msgid "Previous page"
-msgstr "前のページへ"
+msgstr "前のページ"
 
 #: wp-includes/post-template.php:934
 msgid "Next page"
-msgstr "次ページへ"
+msgstr "次のページ"
 
 #: wp-includes/post-template.php:415
 msgid "There is no excerpt because this is a protected post."
@@ -15937,7 +15941,7 @@ msgstr "このメールアドレスはすでに使用されています !"
 
 #: wp-includes/user.php:1580 wp-includes/ms-functions.php:532
 msgid "Sorry, that username already exists!"
-msgstr "このユーザー名はすでに使用されています !"
+msgstr "そのユーザー名はすでに使用されています。"
 
 #: wp-includes/ms-functions.php:526
 msgid "Sorry, that email address is not allowed!"
@@ -15989,11 +15993,11 @@ msgstr "最新の投稿"
 
 #: wp-includes/link-template.php:1915 wp-includes/link-template.php:2165
 msgid "Next Post"
-msgstr "次の投稿へ"
+msgstr "次の投稿"
 
 #: wp-includes/link-template.php:1915 wp-includes/link-template.php:2165
 msgid "Previous Post"
-msgstr "過去の投稿へ"
+msgstr "前の投稿"
 
 #: wp-includes/link-template.php:759
 msgid "Comments Feed"
@@ -16128,7 +16132,7 @@ msgstr "下"
 
 #: wp-includes/class-wp-editor.php:1339
 msgid "Middle"
-msgstr "Middle"
+msgstr "中央"
 
 #: wp-includes/customize/class-wp-customize-background-position-control.php:47
 #: wp-includes/class-wp-editor.php:1338
@@ -16258,7 +16262,7 @@ msgstr "段落"
 
 #: wp-includes/js/dist/components.js:35295
 msgid "Font size"
-msgstr "文字サイズ"
+msgstr "フォントサイズ"
 
 #: wp-includes/js/dist/editor.js:8609 wp-includes/js/dist/editor.js:10337
 #: wp-includes/js/dist/editor.js:10444
@@ -16719,7 +16723,7 @@ msgstr "%s は保護されている WP 設定なので変更できません"
 #. translators: Used between list items, there is a space after the comma.
 #: wp-includes/class-wp-theme.php:904
 msgid ", "
-msgstr ", "
+msgstr "、"
 
 #. translators: Time difference between two dates, in days. %s: Number of days.
 #: wp-includes/formatting.php:3761
@@ -16929,7 +16933,7 @@ msgstr "1時間に1回"
 msgid "This argument has changed to an array to match the behavior of the other cron functions."
 msgstr "この変数は他の cron 関数の動作と統一させるため配列に変更されました。"
 
-#: wp-includes/comment.php:2279
+#: wp-includes/comment.php:2284
 msgid "Could not update comment status"
 msgstr "コメントの状態を更新できませんでした"
 
@@ -16952,7 +16956,7 @@ msgstr "コメントをキャンセル"
 #. translators: %s: Author of the comment being replied to.
 #: wp-includes/comment-template.php:1962 wp-includes/comment-template.php:2430
 msgid "Leave a Reply to %s"
-msgstr "%s にコメントする"
+msgstr "%s へ返信する"
 
 #: wp-includes/comment-template.php:1958 wp-includes/comment-template.php:2428
 msgid "Leave a Reply"
@@ -17012,18 +17016,18 @@ msgstr "メタ情報"
 msgid "Search results for %s"
 msgstr "「%s」の検索結果"
 
-#: wp-includes/class-walker-comment.php:304
+#: wp-includes/class-walker-comment.php:343
 msgid "(Edit)"
 msgstr "(編集)"
 
 #. translators: 1: Comment date, 2: Comment time.
-#: wp-includes/class-walker-comment.php:300
-#: wp-includes/class-walker-comment.php:388
+#: wp-includes/class-walker-comment.php:339
+#: wp-includes/class-walker-comment.php:434
 msgid "%1$s at %2$s"
 msgstr "%1$s %2$s"
 
-#: wp-includes/class-walker-comment.php:269
-#: wp-includes/class-walker-comment.php:359
+#: wp-includes/class-walker-comment.php:302
+#: wp-includes/class-walker-comment.php:400
 msgid "Your comment is awaiting moderation."
 msgstr "あなたのコメントは承認待ちです。"
 
@@ -17037,7 +17041,7 @@ msgstr "デフォルトの色を選択"
 
 #: wp-includes/post-template.php:927
 msgid "Pages:"
-msgstr "ページ:"
+msgstr "固定ページ:"
 
 #. translators: %s: Comments count.
 #: wp-includes/script-loader.php:1276
@@ -17100,7 +17104,7 @@ msgstr "すべて"
 
 #: wp-includes/class-wp-xmlrpc-server.php:3875
 #: wp-includes/rest-api/endpoints/class-wp-rest-comments-controller.php:549
-#: wp-includes/comment.php:3268
+#: wp-includes/comment.php:3273
 msgid "Sorry, comments are closed for this item."
 msgstr "この投稿へのコメントは受け付けていません。"
 
@@ -17170,15 +17174,15 @@ msgstr "高さ"
 
 #: wp-includes/class-wp-xmlrpc-server.php:560
 msgid "Time Format"
-msgstr "時刻フォーマット"
+msgstr "時刻形式"
 
 #: wp-includes/class-wp-xmlrpc-server.php:555
 msgid "Date Format"
-msgstr "日付のフォーマット"
+msgstr "日付形式"
 
 #: wp-login.php:1088 wp-includes/comment-template.php:2321
 msgid "Email"
-msgstr "メールアドレス"
+msgstr "メール"
 
 #: wp-includes/class-wp-xmlrpc-server.php:545
 #: wp-includes/class-wp-customize-manager.php:5065
@@ -17361,7 +17365,7 @@ msgstr "固定ページ"
 #: wp-includes/pluggable.php:1610 wp-includes/pluggable.php:1794
 #: wp-includes/pluggable.php:1983
 msgid "Email: %s"
-msgstr "メールアドレス: %s"
+msgstr "メール: %s"
 
 #: wp-includes/category-template.php:152
 msgid "Uncategorized"
@@ -17396,7 +17400,7 @@ msgstr "検索"
 #: wp-includes/widgets/class-wp-widget-text.php:553
 #: wp-includes/class-wp-customize-manager.php:4234
 msgid "Dismiss"
-msgstr "非表示にする"
+msgstr "非表示"
 
 #: wp-includes/taxonomy.php:555
 msgid "All Categories"
@@ -17643,7 +17647,7 @@ msgid "Submit"
 msgstr "送信"
 
 #. translators: Name of a comment's author after being anonymized.
-#: wp-includes/comment.php:3568 wp-includes/class-wp-theme.php:897
+#: wp-includes/comment.php:3573 wp-includes/class-wp-theme.php:897
 #: wp-includes/comment-template.php:32
 msgid "Anonymous"
 msgstr "匿名"
@@ -17691,7 +17695,7 @@ msgstr "なし"
 #: wp-includes/customize/class-wp-customize-nav-menu-item-control.php:131
 #: wp-includes/class-wp-editor.php:1212
 msgid "Description"
-msgstr "概要"
+msgstr "説明"
 
 #: wp-includes/comment-template.php:2308
 msgid "Name"
@@ -17758,7 +17762,7 @@ msgstr "抜粋"
 msgid "Publish"
 msgstr "公開"
 
-#: wp-includes/script-loader.php:1274 wp-includes/comment.php:3497
+#: wp-includes/script-loader.php:1274 wp-includes/comment.php:3502
 #: wp-includes/link-template.php:3047 wp-includes/link-template.php:3107
 msgid "Comments"
 msgstr "コメント"
@@ -17787,8 +17791,8 @@ msgid "%s ago"
 msgstr "%s前"
 
 #: wp-includes/class-wp-editor.php:1388
-#: wp-includes/class-walker-comment.php:242
-#: wp-includes/class-walker-comment.php:392 wp-includes/js/dist/editor.js:12394
+#: wp-includes/class-walker-comment.php:250
+#: wp-includes/class-walker-comment.php:438 wp-includes/js/dist/editor.js:12394
 #: wp-includes/js/dist/block-editor.js:20123
 #: wp-includes/js/dist/block-editor.js:20742
 #: wp-includes/js/dist/block-editor.js:22523
@@ -17802,7 +17806,7 @@ msgstr "いいえ"
 
 #: wp-includes/deprecated.php:3132
 msgid "Are you sure you want to do this?"
-msgstr "本当に実行していいですか ?"
+msgstr "本当に実行してよいですか ?"
 
 #: wp-includes/comment-template.php:1111 wp-includes/comment-template.php:2387
 msgctxt "noun"

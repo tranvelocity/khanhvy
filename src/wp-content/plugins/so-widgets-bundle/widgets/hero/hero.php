@@ -241,6 +241,7 @@ class SiteOrigin_Widget_Hero_Widget extends SiteOrigin_Widget_Base_Slider {
 						'label' => __( 'FitText compressor strength', 'so-widgets-bundle' ),
 						'description' => __( 'The higher the value, the more your headings will be scaled down. Values above 1 are allowed.', 'so-widgets-bundle' ),
 						'default' => 0.85,
+						'step' => 0.01,
 						'state_handler' => array(
 							'use_fittext[show]' => array( 'show' ),
 							'use_fittext[hide]' => array( 'hide' ),
@@ -355,15 +356,18 @@ class SiteOrigin_Widget_Hero_Widget extends SiteOrigin_Widget_Base_Slider {
 	 * @return string
 	 */
 	function process_content( $content, $frame ) {
-		ob_start();
-		foreach( $frame['buttons'] as $button ) {
-			$this->sub_widget('SiteOrigin_Widget_Button_Widget', array(), $button['button']);
-		}
-		$button_code = ob_get_clean();
 
-		// Add in the button code
-		$san_content = wp_kses_post($content);
-		$content = preg_replace('/(?:<(?:p|h\d|em|strong|li|blockquote) *([^>]*)> *)?\[ *buttons *\](:? *<\/(?:p|h\d|em|strong|li|blockquote)>)?/i', '<div class="sow-hero-buttons" $1>' . $button_code . '</div>', $san_content );
+		$content = wp_kses_post($content);
+		if ( strpos( $content, '[buttons]' ) !== false ) {
+			ob_start();
+			foreach( $frame['buttons'] as $button ) {
+				$this->sub_widget('SiteOrigin_Widget_Button_Widget', array(), $button['button']);
+			}
+			$button_code = ob_get_clean();
+
+			// Add in the button code
+			$content = preg_replace('/(?:<(?:p|h\d|em|strong|li|blockquote) *([^>]*)> *)?\[ *buttons *\](:? *<\/(?:p|h\d|em|strong|li|blockquote)>)?/i', '<div class="sow-hero-buttons" $1>' . $button_code . '</div>', $content );
+		}
 		
 		// Process normal shortcodes
 		$content = do_shortcode( shortcode_unautop( $content ) );
@@ -449,21 +453,6 @@ class SiteOrigin_Widget_Hero_Widget extends SiteOrigin_Widget_Base_Slider {
 			}
 		}
 		return $val;
-	}
-
-	/**
-	 * Less function for importing Google web fonts.
-	 *
-	 * @param $instance
-	 * @param $args
-	 *
-	 * @return string
-	 */
-	function get_google_font_fields( $instance ) {
-		return array(
-			$instance['design']['heading_font'],
-			! empty( $instance['design']['text_font'] ) ? $instance['design']['text_font'] : '',
-		);
 	}
 
 	function wrapper_class_filter( $classes, $instance ){

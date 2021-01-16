@@ -1,3 +1,29 @@
+## 3.1.6 - December 07, 2020
+
+* Tested up to WordPress 5.6.
+* Tweak: Updated Google fonts.
+* Fixed: Color picker styling issue in Chrome.
+
+## 3.1.5 - August 10, 2020
+
+* Tested up to WordPress 5.5.
+* Tweak: Updated Google fonts.
+* Fixed: Added wp-i18n dependency to alpha color picker script.
+* Fixed: Color picker styles.
+* Fixed: Color picker styles in background control.
+* Fixed: Color picker styles in multicolor control.
+
+## 3.1.4 - July 11, 2020
+
+* Tweak: Updated Google-Fonts lists.
+* Tweak: Tooltip styling.
+* Fixed: Error in the WordPress customizer with WordPress 5.5.
+
+## 3.1.3 - May 19, 2020
+
+* Tweak: Updated Google-Fonts lists.
+* Tweak: Slightly tweaked some of the default control styles.
+
 ## 3.1.2 - 2020-04-20
 
 ### Fixed
