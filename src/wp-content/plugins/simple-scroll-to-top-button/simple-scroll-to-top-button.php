@@ -5,7 +5,7 @@
  * Description: Easily and safely add a "Scroll to Top" button to your WordPress website.
  * Author: Space X-Chimp
  * Author URI: https://www.spacexchimp.com
- * Version: 4.42
+ * Version: 4.44
  * License: GPL3
  * Text Domain: simple-scroll-to-top-button
  * Domain Path: /languages/
@@ -68,7 +68,7 @@ spacexchimp_p008_define_constants( 'PREFIX', 'spacexchimp_p008' );
 spacexchimp_p008_define_constants( 'SETTINGS', 'spacexchimp_p008' );
 
 /**
- * A useful function that returns an array with the contents of plugin constants
+ * A useful function that returns an array with the contents of the plugin constants
  */
 function spacexchimp_p008_plugin() {
     $array = array(
@@ -96,6 +96,7 @@ $plugin = spacexchimp_p008_plugin();
  * Load the plugin modules
  */
 require_once( $plugin['path'] . 'inc/php/core.php' );
+require_once( $plugin['path'] . 'inc/php/options.php' );
 require_once( $plugin['path'] . 'inc/php/upgrade.php' );
 require_once( $plugin['path'] . 'inc/php/versioning.php' );
 require_once( $plugin['path'] . 'inc/php/enqueue.php' );

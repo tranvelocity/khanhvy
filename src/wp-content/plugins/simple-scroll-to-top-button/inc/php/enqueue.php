@@ -13,13 +13,12 @@ function spacexchimp_p008_load_scripts_dynamic_js() {
     // Put value of plugin constants into an array for easier access
     $plugin = spacexchimp_p008_plugin();
 
-    // Retrieve options from database and declare variables
-    $options = get_option( $plugin['settings'] . '_settings' );
-    $scroll_duration = !empty( $options['scroll_duration'] ) ? $options['scroll_duration'] : '300';
+    // Put the value of the plugin options into an array for easier access
+    $options = spacexchimp_p008_options();
 
     // Create an array (JS object) with all the settings
     $script_params = array(
-                           'scroll_duration' => $scroll_duration,
+                           'scroll_duration' => $options['scroll_duration'],
                            );
 
     // Inject the array into the JavaScript file
@@ -34,22 +33,19 @@ function spacexchimp_p008_load_scripts_dynamic_css() {
     // Put value of plugin constants into an array for easier access
     $plugin = spacexchimp_p008_plugin();
 
-    // Retrieve options from database and declare variables
-    $options = get_option( $plugin['settings'] . '_settings' );
-    $backgroun_color = !empty( $options['background-color'] ) ? $options['background-color'] : '#000';
-    $symbol_color = !empty( $options['symbol-color'] ) ? $options['symbol-color'] : '#fff';
-    $size_button = !empty( $options['size_button'] ) ? $options['size_button'] : '32';
+    // Put the value of the plugin options into an array for easier access
+    $options = spacexchimp_p008_options();
 
     // Create an array with all the settings (CSS code)
     $custom_css = "
                     #ssttbutton {
-                        font-size: " . $size_button . "px;
+                        font-size: " . $options['size_button'] . "px;
                     }
                     .ssttbutton-background {
-                        color: " . $backgroun_color . ";
+                        color: " . $options['background-color'] . ";
                     }
                     .ssttbutton-symbol {
-                        color: " . $symbol_color . ";
+                        color: " . $options['symbol-color'] . ";
                     }
                   ";
 
@@ -101,7 +97,6 @@ function spacexchimp_p008_load_scripts_admin( $hook ) {
 
     // Call the function that contains the dynamic CSS
     spacexchimp_p008_load_scripts_dynamic_css();
-
 }
 add_action( 'admin_enqueue_scripts', $plugin['prefix'] . '_load_scripts_admin' );
 
@@ -110,35 +105,31 @@ add_action( 'admin_enqueue_scripts', $plugin['prefix'] . '_load_scripts_admin' )
  */
 function spacexchimp_p008_load_scripts_frontend() {
 
+    // Return if the current page does not match the selected one
+    $load_on = spacexchimp_p008_load_on();
+    if ( $load_on !== true ) {
+        return;
+    }
+
     // Put value of plugin constants into an array for easier access
     $plugin = spacexchimp_p008_plugin();
 
-    // Retrieve options from database and declare variables
-    $options = get_option( $plugin['settings'] . '_settings' );
-    $display_on = !empty( $options['display-button'] ) ? $options['display-button'] : '';
+    // Load jQuery library
+    wp_enqueue_script( 'jquery' );
 
-    // If enabled on current page
-    if ( $display_on == '' OR $display_on == 'Home Page Only' AND is_home() OR $display_on == 'Home Page Only' AND is_front_page() ) {
+    // Font Awesome library
+    wp_enqueue_style( $plugin['prefix'] . '-font-awesome-css-frontend', $plugin['url'] . 'inc/lib/font-awesome/css/font-awesome.css', array(), $plugin['version'], 'screen' );
 
-        // Load jQuery library
-        wp_enqueue_script( 'jquery' );
+    // Style sheet
+    wp_enqueue_style( $plugin['prefix'] . '-frontend-css', $plugin['url'] . 'inc/css/frontend.css', array(), $plugin['version'], 'all' );
 
-        // Font Awesome library
-        wp_enqueue_style( $plugin['prefix'] . '-font-awesome-css-frontend', $plugin['url'] . 'inc/lib/font-awesome/css/font-awesome.css', array(), $plugin['version'], 'screen' );
+    // JavaScript
+    wp_enqueue_script( $plugin['prefix'] . '-frontend-js', $plugin['url'] . 'inc/js/frontend.js', array('jquery'), $plugin['version'], true );
 
-        // Style sheet
-        wp_enqueue_style( $plugin['prefix'] . '-frontend-css', $plugin['url'] . 'inc/css/frontend.css', array(), $plugin['version'], 'all' );
+    // Call the function that contains the dynamic JavaScript
+    spacexchimp_p008_load_scripts_dynamic_js();
 
-        // JavaScript
-        wp_enqueue_script( $plugin['prefix'] . '-frontend-js', $plugin['url'] . 'inc/js/frontend.js', array('jquery'), $plugin['version'], true );
-
-        // Call the function that contains the dynamic JavaScript
-        spacexchimp_p008_load_scripts_dynamic_js();
-
-        // Call the function that contains the dynamic CSS
-        spacexchimp_p008_load_scripts_dynamic_css();
-
-    }
-
+    // Call the function that contains the dynamic CSS
+    spacexchimp_p008_load_scripts_dynamic_css();
 }
 add_action( 'wp_enqueue_scripts', $plugin['prefix'] . '_load_scripts_frontend' );
