@@ -3,9 +3,9 @@ Contributors: Arthur Gareginyan
 Tags: scroll to top, scroll up, scroll back, back to top, smooth scroll, back, to top, back top, back to top, go to top, bottom to top, back to up, scroll top, scroll up, page scroll up, one click scroll to top,link to top, back button, back to top button, arrow, button, navigation, back widget, scroll back to top, scroll me up, scroll to top, scroll to up, scroll top, scroll up, scroll up, scroll widget, scroll, scroller, scrolling, scroll up, simple back to top, simple scroll to top, smooth scroll to top, to top button, top button, top scroll, top, up button, up, vertical scroller
 Donate link: https://www.spacexchimp.com/donate.html
 Requires at least: 4.9
-Tested up to: 5.6
+Tested up to: 5.7
 Requires PHP: 5.6
-Stable tag: 4.42
+Stable tag: 4.44
 License: GPL3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -167,8 +167,9 @@ Commercial licensing (e.g. for projects that can’t use an open-source license)
 
 **Credits**
 
-* The icon of plugin is a copyrighted image created by the [Space X-Chimp](https://www.spacexchimp.com) team. (C) All rights reserved.
-* The banner of plugin is a copyrighted image created by the [Space X-Chimp](https://www.spacexchimp.com) team. (C) All rights reserved.
+* The icon of this plugin is a copyrighted image created by the [Space X-Chimp](https://www.spacexchimp.com) team. (C) All rights reserved.
+* The banner of this plugin is a copyrighted image created by the [Space X-Chimp](https://www.spacexchimp.com) team. (C) All rights reserved.
+* Unless otherwise stated, all images are created by the [Space X-Chimp](https://www.spacexchimp.com) team and are copyrighted. (C) All rights reserved.
 * [Bootstrap](http://getbootstrap.com) by Twitter, Inc. released under the [MIT license](https://github.com/twbs/bootstrap/blob/master/LICENSE).
 * [Bootstrap-checkbox](https://github.com/vsn4ik/bootstrap-checkbox) is a project of [Vasily A.](https://github.com/vsn4ik), shared under the [MIT license](https://github.com/vsn4ik/bootstrap-checkbox/blob/master/LICENSE).
 * [Font Awesome](https://fontawesome.com) is an open source-project created by Dave Gandy. Font released under the [SIL OFL 1.1 license](http://scripts.sil.org/OFL). Code released under the [MIT License](http://opensource.org/licenses/mit-license.html).
@@ -181,6 +182,16 @@ Commercial licensing (e.g. for projects that can’t use an open-source license)
 
 
 == Changelog ==
+
+= 4.44 - Mar 8, 2021 =
+* Maintenance: Ensure compatibility with upcoming WordPress 5.7.
+* Maintenance: Processing of options has been improved. Direct retrieving of options from the database is replaced by the "_options" callback. The "options.php" file with the "_options" function added.
+
+= 4.43 - Feb 14, 2021 =
+* Enhancement: On the plugin settings page, the "Live preview" section has been redesigned and rewritten for better usability.
+* Enhancement: On the plugin settings page, some options have been redesigned for better usability.
+* Enhancement: The default value for the "Button: Symbol", "Button: Symbol color" and "Button: Background color" options have been changed to "fa-arrow-up", "#fff" and "#ff4f7d" respectively. This is done for better usability when the plugin is just installed.
+* Maintenance: The contents of the "functional.php" and "enqueue.php" files have been optimised; Code formatting and commenting improved. New functions ("_load_on" and "_autoload") added and some functions ("_add_container" -> "_generator") renamed.
 
 = 4.42 - Jan 1, 2021 =
 * Maintenance: The copyright date updated to support the 2021 year.

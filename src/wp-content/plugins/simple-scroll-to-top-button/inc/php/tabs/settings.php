@@ -16,17 +16,6 @@ defined( 'ABSPATH' ) or die( "Restricted access!" );
                 <form action="options.php" method="post" enctype="multipart/form-data">
                     <?php settings_fields( $plugin['settings'] . '_settings_group' ); ?>
 
-                    <?php
-                        // Retrieve options from database
-                        $options = get_option( $plugin['settings'] . '_settings' );
-
-                        // Set default value if option is empty
-                        $transparency = (!empty( $options['transparency_button'] ) AND $options['transparency_button'] == 'on') ? 'ssttbutton-transparent' : '' ;
-                        $background_button = !empty( $options['background_button'] ) ? $options['background_button'] : 'fa-circle';
-                        $background_color = !empty( $options['background-color'] ) ? $options['background-color'] : '#000';
-                        $image_button = !empty( $options['image_button'] ) ? $options['image_button'] : 'fa-hand-o-up';
-                    ?>
-
                     <!-- SUBMIT -->
                     <button type="submit" name="submit" id="submit" class="btn btn-info btn-lg button-save-top">
                         <i class="fa fa-save" aria-hidden="true"></i>
@@ -55,7 +44,7 @@ defined( 'ABSPATH' ) or die( "Restricted access!" );
                                                                           ),
                                                                      __( 'Symbol', $plugin['text'] ),
                                                                      __( 'Select the symbol of the button by choosing one of the ten variants above.', $plugin['text'] ),
-                                                                     'fa-hand-o-up'
+                                                                     'fa-arrow-up'
                                                                    );
                                     spacexchimp_p008_control_choice( 'background_button',
                                                                      array(
@@ -79,7 +68,7 @@ defined( 'ABSPATH' ) or die( "Restricted access!" );
                                     spacexchimp_p008_control_color( 'background-color',
                                                                     __( 'Background color', $plugin['text'] ),
                                                                     __( 'Select the background color of button. You can also add html HEX color code.', $plugin['text'] ),
-                                                                    '#fff'
+                                                                    '#ff4f7d'
                                                                   );
                                     spacexchimp_p008_control_separator(
                                                                         __( 'Size', $plugin['text'] )
@@ -150,12 +139,10 @@ defined( 'ABSPATH' ) or die( "Restricted access!" );
                     <div class="postbox" id="preview">
                         <h3 class="title"><?php _e( 'Live preview', $plugin['text'] ); ?></h3>
                         <div class="inside">
-                            <a id="ssttbutton" href="#top" class="<?php echo $transparency; ?>">
-                                <span class="fa-stack fa-lg">
-                                    <i class="ssttbutton-background fa <?php echo $background_button; ?> fa-stack-2x"></i>
-                                    <i class="ssttbutton-symbol fa <?php echo $image_button; ?> fa-stack-1x"></i>
-                                </span>
-                            </a>
+                            <p class="note"><?php _e( 'Click the "Save changes" button to update this preview.', $plugin['text'] ); ?></p><br>
+                            <div class="text-center">
+                                <?php spacexchimp_p008_generator(); ?>
+                            </div>
                         </div>
                     </div>
                     <!-- END PREVIEW -->

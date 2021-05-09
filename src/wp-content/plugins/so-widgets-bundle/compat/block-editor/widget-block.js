@@ -44,7 +44,13 @@
 			},
 			widgetData: {
 				type: 'object',
-			}
+			},
+			widgetHtml: {
+				type: 'string',
+			},
+			widgetIcons: {
+				type: 'array',
+			},
 		},
 
 		edit: withState( {
@@ -217,6 +223,10 @@
 					props.attributes.widgetClass &&
 					props.attributes.widgetData;
 				if ( loadWidgetPreview ) {
+					props.setAttributes( {
+						widgetHtml: null,
+						widgetIcons: null
+					} );
 					jQuery.post( {
 						url: sowbBlockEditorAdmin.restUrl + 'sowb/v1/widgets/previews',
 						beforeSend: function ( xhr ) {
@@ -229,8 +239,13 @@
 					} )
 					.done( function( widgetPreview ) {
 						props.setState( {
-							widgetPreviewHtml: widgetPreview,
+							widgetPreviewHtml: widgetPreview.html,
 							previewInitialized: false,
+						} );
+
+						props.setAttributes( {
+							widgetHtml: widgetPreview.html,
+							widgetIcons: widgetPreview.icons
 						} );
 					} )
 					.fail( function ( response ) {
@@ -294,9 +309,13 @@
 			}
 		} ),
 
-		save: function () {
-			// Render in PHP
-			return null;
+		save: function ( context ) {
+			if ( context.attributes == 'object' && context.attributes.hasOwnProperty( 'widgetHtml' ) ) {
+   				return React.createElement( wp.element.RawHTML, null, attributes.widgetHtml );
+			} else {
+				// Fallback to PHP Render.
+				return null;
+			}
 		}
 	} );
 } )( window.wp.editor, window.wp.blocks, window.wp.i18n, window.wp.element, window.wp.components, window.wp.compose, window.wp.blockEditor );
